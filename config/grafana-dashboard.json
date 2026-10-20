@@ -1,0 +1,18 @@
+{
+  "title": "PaxosVault",
+  "description": "PaxosVault: A Resilient Distributed Banking and Settlement System Using Multi-Paxos",
+  "uid": "paxosvault",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "5s",
+  "time": {"from": "now-15m", "to": "now"},
+  "panels": [
+    {"id":1,"type":"stat","title":"Reported leaders","gridPos":{"x":0,"y":0,"w":8,"h":5},"targets":[{"refId":"A","expr":"sum(ledger_leader)"}]},
+    {"id":2,"type":"stat","title":"Reachable members","gridPos":{"x":8,"y":0,"w":8,"h":5},"targets":[{"refId":"A","expr":"sum(up{job=\"paxosvault\"})"}]},
+    {"id":3,"type":"stat","title":"Replica slot spread","gridPos":{"x":16,"y":0,"w":8,"h":5},"targets":[{"refId":"A","expr":"max(ledger_applied_slot) - min(ledger_applied_slot)"}]},
+    {"id":4,"type":"timeseries","title":"Applied slots","gridPos":{"x":0,"y":5,"w":12,"h":8},"targets":[{"refId":"A","expr":"ledger_applied_slot","legendFormat":"{{node}}"}]},
+    {"id":5,"type":"timeseries","title":"Submission attempts / second","gridPos":{"x":12,"y":5,"w":12,"h":8},"targets":[{"refId":"A","expr":"rate(ledger_submissions_total[1m])","legendFormat":"{{node}}"}]},
+    {"id":6,"type":"timeseries","title":"Total conserved cents","gridPos":{"x":0,"y":13,"w":12,"h":8},"targets":[{"refId":"A","expr":"ledger_total_cents","legendFormat":"{{node}}"}]},
+    {"id":7,"type":"timeseries","title":"Promised ballot rounds","gridPos":{"x":12,"y":13,"w":12,"h":8},"targets":[{"refId":"A","expr":"ledger_ballot_round","legendFormat":"{{node}}"}]}
+  ]
+}

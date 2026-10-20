@@ -1,0 +1,3 @@
+mkdir -p bin
+/usr/local/go/bin/go build -trimpath -o bin/ledgerd ./cmd/ledgerd
+/usr/local/go/bin/go build -trimpath -o bin/bankctl ./cmd/bankctl

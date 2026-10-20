@@ -1,0 +1,14 @@
+{
+  "go_version": "go version go1.27.3 darwin/arm64",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "commands": [
+    {
+      "command": "make check",
+      "exit_code": 0
+    },
+    {
+      "command": "make build",
+      "exit_code": 0
+    }
+  ]
+}

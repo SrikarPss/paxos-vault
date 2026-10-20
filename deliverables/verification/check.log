@@ -1,0 +1,10 @@
+python3 scripts/check_assets.py
+PASS: JSON assets, Python syntax, election timing, audit checkpoint and tamper detection (7 JSON files scanned).
+/usr/local/go/bin/go vet ./...
+/usr/local/go/bin/go test -race -cover ./...
+	quorumledger/cmd/bankctl		coverage: 0.0% of statements
+	quorumledger/cmd/ledgerd		coverage: 0.0% of statements
+ok  	quorumledger/internal/api	1.545s	coverage: 80.6% of statements
+ok  	quorumledger/internal/consensus	(cached)	coverage: 78.6% of statements
+ok  	quorumledger/internal/ledger	(cached)	coverage: 77.8% of statements
+ok  	quorumledger/internal/storage	(cached)	coverage: 74.6% of statements

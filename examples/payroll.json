@@ -1,0 +1,1 @@
+{"id":"payroll-001","kind":"batch","transfers":[{"from":"alice","to":"bob","amount_cents":25000},{"from":"bob","to":"alice","amount_cents":1000}]}

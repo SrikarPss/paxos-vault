@@ -1,0 +1,23 @@
+services:
+  n1:
+    build: .
+    command: ["-config", "/etc/ledger/cluster.json", "-id", "n1", "-data", "/data"]
+    ports: ["127.0.0.1:8101:8100"]
+    volumes: ["n1-data:/data"]
+    restart: unless-stopped
+  n2:
+    build: .
+    command: ["-config", "/etc/ledger/cluster.json", "-id", "n2", "-data", "/data"]
+    ports: ["127.0.0.1:8102:8100"]
+    volumes: ["n2-data:/data"]
+    restart: unless-stopped
+  n3:
+    build: .
+    command: ["-config", "/etc/ledger/cluster.json", "-id", "n3", "-data", "/data"]
+    ports: ["127.0.0.1:8103:8100"]
+    volumes: ["n3-data:/data"]
+    restart: unless-stopped
+volumes:
+  n1-data:
+  n2-data:
+  n3-data:

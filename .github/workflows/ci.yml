@@ -1,0 +1,21 @@
+name: verify
+on: [push, pull_request]
+jobs:
+  go:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+          cache: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: make check
+      - run: make demo
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: failover-evidence
+          path: artifacts/

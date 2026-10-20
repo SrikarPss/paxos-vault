@@ -1,0 +1,12 @@
+{
+  "cluster_id": "quorum-ledger-local",
+  "internal_token": "local-demo-token-replace-for-private-deployment",
+  "nodes": {
+    "n1": "http://127.0.0.1:8101",
+    "n2": "http://127.0.0.1:8102",
+    "n3": "http://127.0.0.1:8103"
+  },
+  "heartbeat_ms": 150,
+  "election_min_ms": 1500,
+  "rpc_timeout_ms": 300
+}

@@ -1,0 +1,6 @@
+.git
+artifacts
+data
+bin
+__pycache__
+*.test

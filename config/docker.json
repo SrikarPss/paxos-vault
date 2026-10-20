@@ -1,0 +1,8 @@
+{
+  "cluster_id": "quorum-ledger-docker",
+  "internal_token": "local-demo-token-replace-for-private-deployment",
+  "nodes": {"n1":"http://n1:8100","n2":"http://n2:8100","n3":"http://n3:8100"},
+  "heartbeat_ms":150,
+  "election_min_ms":1500,
+  "rpc_timeout_ms":300
+}

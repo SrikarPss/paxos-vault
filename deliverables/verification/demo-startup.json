@@ -1,0 +1,8 @@
+{
+  "mode": "demo",
+  "started_at": "20261020T052952Z",
+  "passed": false,
+  "phase": "startup",
+  "checks": [],
+  "error": "PermissionError(1, 'Operation not permitted')"
+}

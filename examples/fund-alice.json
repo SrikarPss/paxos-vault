@@ -1,0 +1,1 @@
+{"id":"fund-alice","kind":"transfer","transfers":[{"from":"treasury","to":"alice","amount_cents":100000}]}
